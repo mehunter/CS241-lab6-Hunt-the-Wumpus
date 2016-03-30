@@ -1,3 +1,25 @@
+#include <stdio.h>
+
+/* Struct to hold a cave map. */
+struct Map
+{
+  /* How many rooms in the map/ */
+  int rooms;
+
+  /* Number of exits from each room */
+  int exitsPerRoom;
+
+  /* Connection info array*/
+  int** connections;
+};
+
+int nextRoom(struct Map* map, int room, int exit);
+int neighbor(int current, int test, struct Map* map);
+int validPath(int pathlength, int path[], struct Map* map);
+struct Map* loadMap(FILE* in);
+void freeMap(struct Map* map);
+
+
 /* Given map, current room, and exit choice, return the room # of the next 
  * room. 
  */
@@ -41,7 +63,7 @@ int validPath(int pathlength, int path[], struct Map* map)
  */
 struct Map* loadMap(FILE* in)
 {
-  return;
+  return NULL;
 }
 
 
